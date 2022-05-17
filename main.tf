@@ -7,7 +7,7 @@ resource "aws_security_group" "cf_tcp_lb_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
     protocol    = "tcp"
     from_port   = 40000
-    to_port     = 40100
+    to_port     = 40099
   }
 
   egress {
