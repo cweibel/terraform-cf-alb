@@ -7,7 +7,7 @@ resource "aws_security_group" "cf_tcp_lb_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
     protocol    = "tcp"
     from_port   = 40000
-    to_port     = 40099
+    to_port     = 40098
   }
 
   egress {
@@ -683,12 +683,6 @@ resource "aws_elb" "cf_tcp_lb" {
     instance_port     = 40098
     instance_protocol = "tcp"
     lb_port           = 40098
-    lb_protocol       = "tcp"
-  }
-  listener {
-    instance_port     = 40099
-    instance_protocol = "tcp"
-    lb_port           = 40099
     lb_protocol       = "tcp"
   }
 
